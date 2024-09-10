@@ -1,6 +1,12 @@
-module c3ctest;
+module main;
 
 extern fn int add(int, int);
+
+extern fn void initscr();
+extern fn void printw(char*);
+extern fn void refresh();
+extern fn void getch();
+extern fn void endwin();
 
 import libc;
 import std::io;
@@ -41,6 +47,12 @@ fn int main(String[] argv)
   //render();
 
   io::printn(add(3, 4));
-
+  
+  initscr();
+  printw("Hello World");
+  refresh();
+  getch();
+  endwin();
+  
   return 0;
 }

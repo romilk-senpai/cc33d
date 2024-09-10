@@ -51,4 +51,7 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+#Something
 *~
+*.s
+/SFML-2.6.1/
