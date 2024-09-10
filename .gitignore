@@ -18,7 +18,7 @@
 
 # Libraries
 *.lib
-*.a
+*.arm 
 *.la
 *.lo
 
@@ -54,4 +54,5 @@ dkms.conf
 #Something
 *~
 *.s
-/SFML-2.6.1/
+*.a
+/lib/

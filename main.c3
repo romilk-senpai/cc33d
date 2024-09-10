@@ -1,16 +1,10 @@
 module main;
 
-extern fn int add(int, int);
-
-extern fn void initscr();
-extern fn void printw(char*);
-extern fn void refresh();
-extern fn void getch();
-extern fn void endwin();
-
 import libc;
 import std::io;
 import std::thread;
+
+import ncurses;
 
 bool running = true;
 
@@ -39,20 +33,18 @@ fn void render()
     }
   }
 
-  io::printn(screen);
+  ncurses::printw(screen);
+  ncurses::refresh();
 }
 
 fn int main(String[] argv)
 {
-  //render();
+  ncurses::initscr();
 
-  io::printn(add(3, 4));
+  render();
   
-  initscr();
-  printw("Hello World");
-  refresh();
-  getch();
-  endwin();
+  ncurses::getch();
+  ncurses::endwin();
   
   return 0;
 }
