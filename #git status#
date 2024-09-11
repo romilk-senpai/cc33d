@@ -293,4 +293,161 @@ Makefile          README.md  cc33d.out        interop.c  lib        main.c3~  nc
 ~/projects/cc33d $ ls
 Makefile   README.md        cc33d.out  interop.c  lib      main.c3~        ncurses-test.out  ncurses.c3~
 Makefile~  cc33d.makefile~  interop.a  interop.s  main.c3  ncurses-test.c  ncurses.c3        
+~/projects/cc33d $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    .#ncurses-test.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.#git status
+	git status
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/projects/cc33d $ git add -A
+~/projects/cc33d $ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ~/projects/cc33d $ 
+~/projects/cc33d $ git commit -m "erm"
+[master d35d80f] erm
+ 2 files changed, 296 insertions(+)
+ rename .#ncurses-test.c => .#git status (100%)
+ create mode 100644 git status
+~/projects/cc33d $ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.45 KiB | 2.45 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.        
+To https://github.com/romilk-senpai/cc33d.git
+   3117020..d35d80f  master -> master
+~/projects/cc33d $ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~/projects/cc33d $ 
+~/projects/cc33d $ ls
+Makefile   README.md        cc33d.out   interop.a  interop.s  main.c3   ncurses-test.c    ncurses.c3
+Makefile~  cc33d.makefile~  git status  interop.c  lib        main.c3~  ncurses-test.out  ncurses.c3~
+~/projects/cc33d $ rm git\ status 
+~/projects/cc33d $ git ad
