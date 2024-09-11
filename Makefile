@@ -4,7 +4,7 @@ OBJS =
 PROG = cc33d
 LOCALLIBDIR = /usr/local/lib
 LDFLAGS = -L $(LOCALLIBDIR)
-LDLIBS  = -l ncurses
+LDLIBS  = -l ncursesw
 
 all: $(PROG)
 

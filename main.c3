@@ -6,6 +6,8 @@ import std::thread;
 
 import ncurses;
 
+extern fn char* setlocale(int, char*);
+
 bool running = true;
 
 const int SCREEN_WIDTH = 132;
@@ -33,13 +35,20 @@ fn void render()
     }
   }
 
-  ncurses::printw(screen);
+  ncurses::printw("%s", screen);
   ncurses::refresh();
 }
 
 fn int main(String[] argv)
 {
+  setlocale(0, "");
+
   ncurses::initscr();
+
+  Char32 t = '\u2588';
+
+  io::printf("%c", t);
+  ncurses::printw("%c", t);
 
   render();
   
