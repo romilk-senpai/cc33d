@@ -12,10 +12,10 @@ bool running = true;
 
 const int SCREEN_WIDTH = 132;
 const int SCREEN_HEIGHT = 43;
+char* wall = "\u2588";
 
 fn void render()
 {
-  char[] screen = mem::temp_new_array(char, SCREEN_WIDTH * SCREEN_HEIGHT);
   double aspect = (double)SCREEN_WIDTH / SCREEN_HEIGHT;
   double symbol_aspect = 9.0 / 21.0;
   
@@ -26,29 +26,24 @@ fn void render()
       double x = (double)i / SCREEN_WIDTH * 2.0 - 1.0;
       double y = (double)j / SCREEN_HEIGHT * 2.0 - 1.0;
       x *= aspect * symbol_aspect;
-      char symbol = ' ';
+      char* symbol = " ";
       if (x * x + y * y < 0.5)
       {
-	symbol = '@';
+	symbol = wall;
       }
-      screen[i + j * SCREEN_WIDTH] = symbol;
+      
+      ncurses::mvaddstr(j, i, symbol);
     }
   }
-
-  ncurses::printw("%s", screen);
+  
   ncurses::refresh();
 }
 
 fn int main(String[] argv)
 {
-  setlocale(0, "");
+  setlocale(6, "");
 
   ncurses::initscr();
-
-  Char32 t = '\u2588';
-
-  io::printf("%c", t);
-  ncurses::printw("%c", t);
 
   render();
   

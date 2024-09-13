@@ -11,8 +11,9 @@ int main()
 {
   setlocale(6, "");
   initscr();
-  wchar_t t = L'\u2588';
+  //wchar_t t = L"\u2588";
   char* c = "\u2588";
+  
   //char c = L'\u2588';
   //intf("%c", t);
   //printf(LC_ALL); // 6
@@ -23,13 +24,18 @@ int main()
   addstr("\u2588");
   addch(' ');
   mvaddstr(10, 10, "\u2588");
-  printf("%d", c);
+  addch(' ');
+  //addch(t);
   mvaddstr(15, 55, c);
+  mvaddstr(15, 56, c);
+  mvaddstr(15, 57, c);
+  //mvadd_wch(15, 57, &t);
   addch(' ');
   //addch(t);
   //add_wch(t);
   refresh();
   getch();
   endwin();
+  printf("%d", c);
   return 0;
 }
